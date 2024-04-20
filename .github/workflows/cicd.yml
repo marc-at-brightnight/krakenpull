@@ -10,7 +10,7 @@ jobs:
       run: |
         source venv/bin/activate
         black krakenpull --check --diff --color
-        mypy krakenpull --ignore-missing-imports --install-types
+        mypy krakenpull --ignore-missing-imports
         pytest -vv
 
   publish:

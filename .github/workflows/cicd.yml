@@ -6,12 +6,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: ./.github/actions/cached-venv
-    - name: Test coincalc service
+    - name: Test krakenpull service
       run: |
         source venv/bin/activate
         black krakenpull --check --diff --color
-        mypy --install-types
-        mypy krakenpull --ignore-missing-imports
+        mypy krakenpull --ignore-missing-imports --install-types
         pytest -vv
 
   publish:

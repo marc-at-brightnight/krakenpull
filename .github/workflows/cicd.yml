@@ -1,0 +1,14 @@
+name: ci
+on: [push]
+jobs:
+  coincalc:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ./.github/actions/cached-venv
+    - name: Test coincalc service
+      run: |
+        source venv/bin/activate
+        black krakenpull --check --diff --color
+        mypy krakenpull --ignore-missing-imports
+        pytest -vv

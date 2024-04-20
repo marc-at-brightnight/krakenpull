@@ -1,0 +1,56 @@
+[
+  {
+    "id": "OEQRT3-3UMPA-Y3HOR6",
+    "pair":
+       "XBTUSD"
+    ,
+    "type": "buy",
+    "ordertype": "limit",
+    "price": 41950.0,
+    "price2": 0.0,
+    "fee": 11.68,
+    "vol": 0.032,
+    "cost": 1342.4,
+    "leverage": "none",
+    "order": "buy 0.02383790 XBTUSD @ limit 41950.0",
+    "close": "",
+    "open_datetime": "2024-01-26T19:48:10.087632+00:00",
+    "close_datetime": "2024-01-26T20:39:35.713891+00:00"
+  },
+  {
+    "id": "OQYBOC-67O42-YWLGJN",
+    "pair":
+      "XBTUSD"
+    ,
+    "type": "buy",
+    "ordertype": "limit",
+    "price": 40000.0,
+    "price2": 0.0,
+    "fee": 5.56,
+    "vol": 0.0674,
+    "cost": 2696.0,
+    "leverage": "none",
+    "order": "buy 0.10002713 XBTUSD @ limit 40000.0",
+    "close": "",
+    "open_datetime": "2024-01-24T13:00:30.808903+00:00",
+    "close_datetime": "2024-01-24T13:05:31.719294+00:00"
+  },
+  {
+    "id": "OWV432-AVWUJ-S5EBCU",
+    "pair":
+       "XBTUSD"
+    ,
+    "type": "buy",
+    "ordertype": "limit",
+    "price": 44500.0,
+    "price2": 0.0,
+    "fee": 8.78,
+    "vol": 0.0234,
+    "cost": 1041.3,
+    "leverage": "none",
+    "order": "buy 0.12350000 XBTUSD @ limit 44500.0",
+    "close": "",
+    "open_datetime": "2024-01-10T14:56:08.733830+00:00",
+    "close_datetime": "2024-01-12T15:39:48.438978+00:00"
+  }
+]

@@ -14,6 +14,7 @@ from krakenpull.models import (
     TickerInfo,
     JSON,
 )
+from krakenpull.utils import get_unique_tickers
 
 BASE_URL = "https://api.kraken.com/0"
 
@@ -44,11 +45,27 @@ class AbstractKraken(abc.ABC):
         self, currency_pairs: list[CurrencyPair] | CurrencyPair
     ) -> list[TickerInfo]:
         url, _ = self._return_url_endpoint(endpoint="Ticker")
-        pairs = currency_pairs if isinstance(currency_pairs, list) else [currency_pairs]
+        pairs = get_unique_tickers(
+            currency_pairs if isinstance(currency_pairs, list) else [currency_pairs]
+        )
+
+        usd_ticker = []
+        if (Currency.ZUSD, Currency.USD) in pairs:
+            index = pairs.index((Currency.ZUSD, Currency.USD))
+            pairs.pop(index)
+            usd_ticker = [
+                TickerInfo(
+                    pair=(Currency.ZUSD, Currency.USD),
+                    price=1,
+                    low=1,
+                    high=1,
+                )
+            ]
+
         stringed_pairs = ["".join(c.value for c in pair) for pair in pairs]
         res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
         result = self._get_result(res, op="get ticker info")
-        return [
+        return usd_ticker + [
             TickerInfo.model_validate(
                 {
                     "pair": pair_id,
@@ -125,10 +142,6 @@ class FakeKraken(AbstractKraken):
 
     def _get_server_time_unix(self) -> int:
         return int(time.time() * 1000)
-
-
-# FIXME
-# get_env_variables().KRAKEN_API_KEY
 
 
 class Kraken(AbstractKraken):

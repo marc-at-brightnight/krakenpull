@@ -47,10 +47,6 @@ class TransactionType(Enum):
     sell = "sell"
 
 
-# FIXME
-# OrderType = Literal['limit', 'market', 'stop-loss', 'take-profit']
-
-
 class OrderType(Enum):
     limit = "limit"
     market = "market"
@@ -64,7 +60,10 @@ class BaseTickerInfo(BaseModel):
 
     @field_validator("pair", mode="before")
     @classmethod
-    def parse_pair(cls, v: str) -> tuple[Currency, Currency]:
+    def parse_pair(cls, v: str | tuple) -> tuple[Currency, Currency]:
+        if isinstance(v, tuple):
+            return Currency(v[0]), Currency(v[1])
+
         if v == "USDZUSD" or v == "USDTZUSD":
             return Currency.USDT, Currency.USD
 

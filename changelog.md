@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 (5/4/2024)
+
+* Another small fix to ticker info model validation for pair
+
 ## 0.2.0 (5/4/2024)
 
 * Fix to ticker info model validation for pair

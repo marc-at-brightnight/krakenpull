@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "krakenpull"
-version = "0.2.0"
+version = "0.2.1"
 description = "A user friendly Kraken API client using pydantic 🐙"
 authors = ["marc <marc@mawaie.com>"]
 readme = "README.md"

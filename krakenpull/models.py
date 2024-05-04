@@ -60,8 +60,8 @@ class BaseTickerInfo(BaseModel):
 
     @field_validator("pair", mode="before")
     @classmethod
-    def parse_pair(cls, v: str | tuple) -> tuple[Currency, Currency]:
-        if isinstance(v, tuple):
+    def parse_pair(cls, v: str | tuple | list) -> tuple[Currency, Currency]:
+        if isinstance(v, tuple) or isinstance(v, list):
             return Currency(v[0]), Currency(v[1])
 
         if v == "USDZUSD" or v == "USDTZUSD":

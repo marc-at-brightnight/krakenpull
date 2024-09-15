@@ -14,12 +14,12 @@ pip install krakenpull
 
 ### Usage 🪚
 
-Initialize a kraken client with the the `get_kraken_client` function:
+Initialize a kraken client:
 
 ```python
-from krakenpull import get_kraken_client
+from krakenpull import Kraken
 
-client = get_kraken_client(key, private_key)
+client = Kraken(key, private_key)
 ```
 
 Common methods and features:

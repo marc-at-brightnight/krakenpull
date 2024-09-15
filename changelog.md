@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (9/15/2024)
+
+* BREAKING CHANGE: Removed `get_kraken_client` and abstract client, in favor of mocking data in the tests 
+
 ## 0.2.1 (5/4/2024)
 
 * Another small fix to ticker info model validation for pair

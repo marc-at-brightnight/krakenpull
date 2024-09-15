@@ -1,7 +1,7 @@
 import typing
 
 
-VERSION = "0.2.1"
+VERSION = "1.0.0"
 
 
 if typing.TYPE_CHECKING:
@@ -18,7 +18,6 @@ if typing.TYPE_CHECKING:
         Asset,
     )
     from .client import (
-        get_kraken_client,
         Kraken,
     )
 
@@ -34,7 +33,6 @@ __all__ = (
     "TickerInfo",
     "Asset",
     # client
-    "get_kraken_client",
     "Kraken",
 )
 

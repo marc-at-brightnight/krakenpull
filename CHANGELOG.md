@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 (10/04/2024)
+
+* BREAKING CHANGE: Revamped currency pair to use accepted currency pairs from Kraken (now supports all pairs)
+* BREAKING CHANGE: Removed support for Bitcoin as BTC, now only works with XBT
+
 ## 1.0.0 (9/15/2024)
 
 * BREAKING CHANGE: Removed `get_kraken_client` and abstract client, in favor of mocking data in the tests 

@@ -2,8 +2,6 @@
 
 ## A user friendly Kraken API client using pydantic 🐙
 
-### 🚧 This repo is still a work in progress 🚧
-
 ### Installation 💿
 
 The easiest way to use krakenpull is to install via pip:
@@ -27,7 +25,7 @@ Common methods and features:
 ```python
 # get account balance
 balances = client.get_account_balance()
-print(balances) # {Currency.BTC: 5.23}
+print(balances) # {Currency.XBT: 5.23}
 
 # get closed orders
 closed_orders = client.get_closed_orders()
@@ -35,7 +33,7 @@ print(closed_orders) # [ClosedTransactions(...), ...]
 
 # get order book
 from krakenpull import Currency
-order_book = client.get_order_book(currency_pair=(Currency.BTC, Currency.USD))
+order_book = client.get_order_book(currency_pair=(Currency.XBT, Currency.USD))
 print(order_book) # {"asks": ["69854.10000", "17.384", 1711832989], "bids": ["69854.00000", "0.015", 1711832988]} 
 ```
 

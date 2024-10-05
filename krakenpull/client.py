@@ -9,11 +9,12 @@ from requests import Response
 from krakenpull.models import (
     CurrencyPair,
     ClosedTransaction,
-    Currency,
     TickerInfo,
     JSON,
+    TradingPairs,
+    CurrencyType,
 )
-from krakenpull.utils import get_unique_tickers
+from krakenpull.utils import get_unique_tickers, get_currency_pair, parse_currency
 
 BASE_URL = "https://api.kraken.com/0"
 
@@ -26,6 +27,7 @@ class Kraken:
         self.public_endpoint = "/0/public"
         self.api_key = key
         self.private_key = private_key
+        self.pair_map = self._parse_trading_pairs()
 
     def get_order_book(self, currency_pair: CurrencyPair) -> JSON:
         url, _ = self._return_url_endpoint(endpoint="Depth")
@@ -33,7 +35,7 @@ class Kraken:
         result = self._get_result(res, op="get order book")
         return list(result.values())[0]
 
-    def get_account_balance(self) -> dict[Currency, float]:
+    def get_account_balance(self) -> dict[CurrencyType, float]:
         url, endpoint = self._return_url_endpoint(endpoint="Balance", private=True)
         nonce = self._get_server_time_unix()
         headers = self._headers(endpoint, nonce)
@@ -44,9 +46,7 @@ class Kraken:
         )
         result = self._get_result(res, op="get account balance")
         return {
-            Currency(k.replace("XX", "X")): float(v)
-            for k, v in result.items()
-            if float(v) > 1e-5
+            parse_currency(k): float(v) for k, v in result.items() if float(v) > 1e-5
         }
 
     def get_closed_orders(self, trades: bool = False) -> list[ClosedTransaction]:
@@ -68,6 +68,7 @@ class Kraken:
                 | v["descr"]
                 | {
                     "id": k,
+                    "pair": self.pair_map[v["descr"]["pair"]],
                     "price": v["price"],
                     "open_datetime": v["opentm"],
                     "close_datetime": v["closetm"],
@@ -78,33 +79,33 @@ class Kraken:
         ]
 
     def get_ticker_info(
-        self, currency_pairs: list[CurrencyPair] | CurrencyPair
+        self, currency_pairs: list[CurrencyPair] | CurrencyPair | None = None
     ) -> list[TickerInfo]:
         url, _ = self._return_url_endpoint(endpoint="Ticker")
-        pairs = get_unique_tickers(
-            currency_pairs if isinstance(currency_pairs, list) else [currency_pairs]
-        )
 
-        usd_ticker = []
-        if (Currency.ZUSD, Currency.USD) in pairs:
-            index = pairs.index((Currency.ZUSD, Currency.USD))
-            pairs.pop(index)
-            usd_ticker = [
-                TickerInfo(
-                    pair=(Currency.ZUSD, Currency.USD),
-                    price=1,
-                    low=1,
-                    high=1,
-                )
-            ]
+        if currency_pairs:
+            pairs = get_unique_tickers(
+                currency_pairs if isinstance(currency_pairs, list) else [currency_pairs]
+            )
 
-        stringed_pairs = ["".join(c.value for c in pair) for pair in pairs]
-        res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
-        result = self._get_result(res, op="get ticker info")
-        return usd_ticker + [
+            stringed_pairs = ["".join(c.value for c in pair) for pair in pairs]
+            try:
+                res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
+                result = self._get_result(res, op="get ticker info")
+            except Exception:
+                stringed_pairs = [
+                    "".join(c.value for c in reversed(pair)) for pair in pairs
+                ]
+                res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
+                result = self._get_result(res, op="get ticker info")
+        else:
+            res = requests.post(url)
+            result = self._get_result(res, op="get ticker info")
+
+        return [
             TickerInfo.model_validate(
                 {
-                    "pair": pair_id,
+                    "pair": self.pair_map[pair_id],
                     "price": data["a"][0],
                     "low": data["l"][0],
                     "high": data["h"][0],
@@ -112,6 +113,21 @@ class Kraken:
             )
             for pair_id, data in result.items()
         ]
+
+    def _parse_trading_pairs(self) -> dict[str, CurrencyPair]:
+        url, _ = self._return_url_endpoint(endpoint="AssetPairs")
+        res = requests.post(url)
+        result: dict[str, TradingPairs] = self._get_result(res, op="get ticker info")
+
+        base_pair_map = {
+            pair: get_currency_pair(pair_info["wsname"])
+            for pair, pair_info in result.items()
+        }
+        pairs = list(base_pair_map.values())
+        return base_pair_map | {
+            pair_info["altname"]: pairs[i]
+            for i, pair_info in enumerate(result.values())
+        }
 
     def _return_url_endpoint(
         self, endpoint: str, private: bool = False

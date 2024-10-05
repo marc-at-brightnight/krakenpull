@@ -1,9 +1,7 @@
 [
   {
     "id": "OEQRT3-3UMPA-Y3HOR6",
-    "pair":
-       "XBTUSD"
-    ,
+    "pair": ["XBT", "USD"],
     "type": "buy",
     "ordertype": "limit",
     "price": 41950.0,
@@ -19,9 +17,7 @@
   },
   {
     "id": "OQYBOC-67O42-YWLGJN",
-    "pair":
-      "XBTUSD"
-    ,
+    "pair": ["XBT", "USD"],
     "type": "buy",
     "ordertype": "limit",
     "price": 40000.0,
@@ -37,9 +33,7 @@
   },
   {
     "id": "OWV432-AVWUJ-S5EBCU",
-    "pair":
-       "XBTUSD"
-    ,
+    "pair": ["XBT", "USD"],
     "type": "buy",
     "ordertype": "limit",
     "price": 44500.0,

@@ -1,14 +1,15 @@
 import typing
 
 
-VERSION = "1.0.0"
+VERSION = "2.0.0"
 
 
 if typing.TYPE_CHECKING:
     # import of virtually everything is supported via `__getattr__` below,
     # but we need them here for type checking and IDE support
     from .models import (
-        NonfiatCurrency,
+        FiatCurrency,
+        CryptoCurrency,
         Currency,
         CurrencyPair,
         TransactionType,
@@ -24,7 +25,8 @@ if typing.TYPE_CHECKING:
 __version__ = VERSION
 __all__ = (
     # models
-    "NonfiatCurrency",
+    "FiatCurrency",
+    "CryptoCurrency",
     "Currency",
     "CurrencyPair",
     "TransactionType",
@@ -39,7 +41,8 @@ __all__ = (
 # A mapping of {<member name>: (package, <module name>)} defining dynamic imports
 _dynamic_imports: "dict[str, tuple[str, str]]" = {
     # models
-    "NonfiatCurrency": (__package__, ".models"),
+    "FiatCurrency": (__package__, ".models"),
+    "CryptoCurrency": (__package__, ".models"),
     "Currency": (__package__, ".models"),
     "CurrencyPair": (__package__, ".models"),
     "TransactionType": (__package__, ".models"),

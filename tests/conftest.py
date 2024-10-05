@@ -3,8 +3,8 @@ from unittest.mock import MagicMock
 import pytest
 from pydantic import TypeAdapter
 
+from krakenpull import Currency, ClosedTransaction
 from krakenpull.client import Kraken
-from krakenpull.models import Currency, ClosedTransaction
 from krakenpull.utils import load_json
 from tests import TEST_DATA_DIR
 
@@ -33,17 +33,17 @@ def get_client():
         transactions = load_json(TEST_DATA_DIR / "transactions1.json")
         client = Kraken("key", "private_key")
         client.get_closed_orders = MagicMock(return_value=TypeAdapter(list[ClosedTransaction]).validate_python(transactions))  # type: ignore
-        client.get_account_balance = MagicMock(
-            return_value={  # type: ignore
+        client.get_account_balance = MagicMock(  # type: ignore
+            return_value={
                 Currency.FLR: 1062.2314,
                 Currency.SGB: 1062.2666259600,
                 Currency.USDT: 10474.11937100,
-                Currency.BTC: 4.2375553847,
+                Currency.XBT: 4.2375553847,
                 Currency.XMR: 1.600,
             }
         )
-        client.get_order_book = MagicMock(
-            return_value={  # type: ignore
+        client.get_order_book = MagicMock(  # type: ignore
+            return_value={
                 "asks": [
                     ["69854.10000", "17.384", 1711832989],
                     ["69854.20000", "0.189", 1711832983],

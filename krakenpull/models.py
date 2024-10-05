@@ -1,45 +1,33 @@
-from typing import Any
-
-import json
-
 import datetime as dt
+import json
 from enum import Enum
+from typing import Any, TypedDict, Type
 
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel
 
+from krakenpull.data import FiatCurrency, CryptoCurrency
 
 JSON = dict[str, Any]
 
 
-class NonfiatCurrency(Enum):
-    btc = "XBT"
-    ltc = "LTC"
+def extend_enum(base_enum: Type[Enum], other_enum: Type[Enum]):
+    return Enum(
+        base_enum.__name__,
+        {c: c for c in base_enum.__members__} | {c: c for c in other_enum.__members__},
+    )
 
 
-class Currency(Enum):
-    USD = "USD"
-    BTC = "XBT"
-    LTC = "LTC"
-    AAVE = "AAVE"
-    ADA = "ADA"
-    ATOM = "ATOM"
-    BCH = "BCH"
-    BSV = "BSV"
-    DOT = "DOT"
-    EOS = "EOS"
-    ETHW = "ETHW"
-    FLR = "FLR"
-    LINK = "LINK"
-    SGB = "SGB"
-    USDT = "USDT"
-    ETH = "ETH"
-    XLM = "XLM"
-    XMR = "XMR"
-    XRP = "XRP"
-    ZUSD = "ZUSD"
+CurrencyType = FiatCurrency | CryptoCurrency
 
 
-CurrencyPair = tuple[Currency, Currency]
+Currency = extend_enum(CryptoCurrency, FiatCurrency)
+
+
+CurrencyPair = (
+    tuple[CryptoCurrency, CryptoCurrency]
+    | tuple[CryptoCurrency, FiatCurrency]
+    | tuple[FiatCurrency, FiatCurrency]
+)
 
 
 class TransactionType(Enum):
@@ -54,48 +42,28 @@ class OrderType(Enum):
     take_profit = "take-profit"
 
 
+class TradingPairs(TypedDict):
+    altname: str
+    wsname: str
+    base: str
+    quote: str
+
+
 class BaseTickerInfo(BaseModel):
     pair: CurrencyPair
     price: float
 
-    @field_validator("pair", mode="before")
-    @classmethod
-    def parse_pair(cls, v: str | tuple | list) -> tuple[Currency, Currency]:
-        if isinstance(v, tuple) or isinstance(v, list):
-            return Currency(v[0]), Currency(v[1])
-
-        if v == "USDZUSD" or v == "USDTZUSD":
-            return Currency.USDT, Currency.USD
-
-        try:
-            currency1 = Currency(v[:3])
-        except ValueError:
-            try:
-                currency1 = Currency(v[:4].replace("XX", "X"))
-            except ValueError:
-                raise Exception("Currency 1 could not be parsed")
-
-        try:
-            currency2 = Currency(v[3:])
-        except ValueError:
-            try:
-                currency2 = Currency(v[4:])
-            except ValueError:
-                raise Exception("Currency 2 could not be parsed")
-
-        return currency1, currency2
-
     @property
-    def currency1(self) -> Currency:
+    def currency1(self) -> CurrencyType:
         return self.pair[0]
 
     @property
-    def currency2(self) -> Currency:
+    def currency2(self) -> CurrencyType:
         return self.pair[1]
 
     @property
     def currency_pair_id(self) -> str:
-        return "".join(c.value for c in self.pair)
+        return "".join(c.value for c in list(self.pair))
 
 
 class ClosedTransaction(BaseTickerInfo):
@@ -117,7 +85,7 @@ class TickerInfo(BaseTickerInfo):
 
 
 class Asset(BaseModel):
-    currency: Currency
+    currency: CurrencyType
     value: float
     amount: float
 

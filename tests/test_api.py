@@ -1,19 +1,17 @@
-from krakenpull.models import ClosedTransaction, Currency, TickerInfo
 from deepdiff import DeepDiff
 
-from krakenpull.utils import load_json
+from krakenpull.models import ClosedTransaction, Currency, TickerInfo
 from tests import TEST_DATA_DIR
 
 
-def test_kraken_api(get_client, real):
+def test_kraken_api(get_client, real, beta):
     client = get_client(real)
     time = client._get_server_time_unix()
     assert isinstance(time, int)
 
     pair_map_jsoned = {k: [x.value for x in v] for k, v in client.pair_map.items()}
-    assert not DeepDiff(
-        pair_map_jsoned, load_json(TEST_DATA_DIR / "expected_pair_map.json")
-    )
+    results_expected = beta(TEST_DATA_DIR / "expected_pair_map.json", pair_map_jsoned)
+    assert not DeepDiff(results_expected, pair_map_jsoned)
 
 
 def test_kraken_get_account_balance(get_client, real):

@@ -671,6 +671,14 @@
     "DASH",
     "XBT"
   ],
+  "DBREUR": [
+    "DBR",
+    "EUR"
+  ],
+  "DBRUSD": [
+    "DBR",
+    "USD"
+  ],
   "DENTEUR": [
     "DENT",
     "EUR"
@@ -803,9 +811,29 @@
     "EOS",
     "XBT"
   ],
+  "ETCETH": [
+    "ETC",
+    "ETH"
+  ],
+  "ETCEUR": [
+    "ETC",
+    "EUR"
+  ],
+  "ETCUSD": [
+    "ETC",
+    "USD"
+  ],
+  "ETCXBT": [
+    "ETC",
+    "XBT"
+  ],
   "ETHAUD": [
     "ETH",
     "AUD"
+  ],
+  "ETHCAD": [
+    "ETH",
+    "CAD"
   ],
   "ETHCHF": [
     "ETH",
@@ -815,6 +843,10 @@
     "ETH",
     "DAI"
   ],
+  "ETHEUR": [
+    "ETH",
+    "EUR"
+  ],
   "ETHFIEUR": [
     "ETHFI",
     "EUR"
@@ -823,9 +855,21 @@
     "ETHFI",
     "USD"
   ],
+  "ETHGBP": [
+    "ETH",
+    "GBP"
+  ],
+  "ETHJPY": [
+    "ETH",
+    "JPY"
+  ],
   "ETHPYUSD": [
     "ETH",
     "PYUSD"
+  ],
+  "ETHUSD": [
+    "ETH",
+    "USD"
   ],
   "ETHUSDC": [
     "ETH",
@@ -846,6 +890,10 @@
   "ETHWUSD": [
     "ETHW",
     "USD"
+  ],
+  "ETHXBT": [
+    "ETH",
+    "XBT"
   ],
   "EULEUR": [
     "EUL",
@@ -886,6 +934,10 @@
   "EURTUSDT": [
     "EURT",
     "USDT"
+  ],
+  "EURUSD": [
+    "EUR",
+    "USD"
   ],
   "EWTEUR": [
     "EWT",
@@ -1033,6 +1085,10 @@
   ],
   "GARIUSD": [
     "GARI",
+    "USD"
+  ],
+  "GBPUSD": [
+    "GBP",
     "USD"
   ],
   "GFIEUR": [
@@ -1479,13 +1535,29 @@
     "LTC",
     "ETH"
   ],
+  "LTCEUR": [
+    "LTC",
+    "EUR"
+  ],
   "LTCGBP": [
     "LTC",
     "GBP"
   ],
+  "LTCJPY": [
+    "LTC",
+    "JPY"
+  ],
+  "LTCUSD": [
+    "LTC",
+    "USD"
+  ],
   "LTCUSDT": [
     "LTC",
     "USDT"
+  ],
+  "LTCXBT": [
+    "LTC",
+    "XBT"
   ],
   "LUNA2EUR": [
     "LUNA2",
@@ -1567,6 +1639,14 @@
     "MEME",
     "USD"
   ],
+  "MEWEUR": [
+    "MEW",
+    "EUR"
+  ],
+  "MEWUSD": [
+    "MEW",
+    "USD"
+  ],
   "MINAEUR": [
     "MINA",
     "EUR"
@@ -1601,6 +1681,18 @@
   ],
   "MKRXBT": [
     "MKR",
+    "XBT"
+  ],
+  "MLNEUR": [
+    "MLN",
+    "EUR"
+  ],
+  "MLNUSD": [
+    "MLN",
+    "USD"
+  ],
+  "MLNXBT": [
+    "MLN",
     "XBT"
   ],
   "MNGOEUR": [
@@ -1931,6 +2023,14 @@
     "POND",
     "USD"
   ],
+  "PONKEEUR": [
+    "PONKE",
+    "EUR"
+  ],
+  "PONKEUSD": [
+    "PONKE",
+    "USD"
+  ],
   "POPCATEUR": [
     "POPCAT",
     "EUR"
@@ -1977,6 +2077,14 @@
   ],
   "PSTAKEUSD": [
     "PSTAKE",
+    "USD"
+  ],
+  "PUFFEREUR": [
+    "PUFFER",
+    "EUR"
+  ],
+  "PUFFERUSD": [
+    "PUFFER",
     "USD"
   ],
   "PYTHEUR": [
@@ -2077,6 +2185,14 @@
   ],
   "RENUSD": [
     "REN",
+    "USD"
+  ],
+  "REPEUR": [
+    "REP",
+    "EUR"
+  ],
+  "REPUSD": [
+    "REP",
     "USD"
   ],
   "REPV2ETH": [
@@ -2467,6 +2583,14 @@
     "TOKE",
     "USD"
   ],
+  "TONEUR": [
+    "TON",
+    "EUR"
+  ],
+  "TONUSD": [
+    "TON",
+    "USD"
+  ],
   "TRACEUR": [
     "TRAC",
     "EUR"
@@ -2567,6 +2691,10 @@
     "UNI",
     "XBT"
   ],
+  "USDCAD": [
+    "USD",
+    "CAD"
+  ],
   "USDCAUD": [
     "USDC",
     "AUD"
@@ -2599,6 +2727,10 @@
     "USDC",
     "USDT"
   ],
+  "USDJPY": [
+    "USD",
+    "JPY"
+  ],
   "USDSEUR": [
     "USDS",
     "EUR"
@@ -2630,6 +2762,10 @@
   "USDTJPY": [
     "USDT",
     "JPY"
+  ],
+  "USDTUSD": [
+    "USDT",
+    "USD"
   ],
   "USDTZUSD": [
     "USDT",
@@ -2707,6 +2843,10 @@
     "XBT",
     "AUD"
   ],
+  "XBTCAD": [
+    "XBT",
+    "CAD"
+  ],
   "XBTCHF": [
     "XBT",
     "CHF"
@@ -2715,9 +2855,25 @@
     "XBT",
     "DAI"
   ],
+  "XBTEUR": [
+    "XBT",
+    "EUR"
+  ],
+  "XBTGBP": [
+    "XBT",
+    "GBP"
+  ],
+  "XBTJPY": [
+    "XBT",
+    "JPY"
+  ],
   "XBTPYUSD": [
     "XBT",
     "PYUSD"
+  ],
+  "XBTUSD": [
+    "XBT",
+    "USD"
   ],
   "XBTUSDC": [
     "XBT",
@@ -2754,6 +2910,10 @@
   "XDGUSDT": [
     "XDG",
     "USDT"
+  ],
+  "XDGXBT": [
+    "XDG",
+    "XBT"
   ],
   "XETCXETH": [
     "ETC",
@@ -2795,6 +2955,22 @@
     "ETH",
     "USD"
   ],
+  "XLMEUR": [
+    "XLM",
+    "EUR"
+  ],
+  "XLMGBP": [
+    "XLM",
+    "GBP"
+  ],
+  "XLMUSD": [
+    "XLM",
+    "USD"
+  ],
+  "XLMXBT": [
+    "XLM",
+    "XBT"
+  ],
   "XLTCXXBT": [
     "LTC",
     "XBT"
@@ -2823,9 +2999,21 @@
     "MLN",
     "USD"
   ],
+  "XMREUR": [
+    "XMR",
+    "EUR"
+  ],
+  "XMRUSD": [
+    "XMR",
+    "USD"
+  ],
   "XMRUSDT": [
     "XMR",
     "USDT"
+  ],
+  "XMRXBT": [
+    "XMR",
+    "XBT"
   ],
   "XREPZEUR": [
     "REP",
@@ -2839,17 +3027,33 @@
     "XRP",
     "AUD"
   ],
+  "XRPCAD": [
+    "XRP",
+    "CAD"
+  ],
   "XRPETH": [
     "XRP",
     "ETH"
+  ],
+  "XRPEUR": [
+    "XRP",
+    "EUR"
   ],
   "XRPGBP": [
     "XRP",
     "GBP"
   ],
+  "XRPUSD": [
+    "XRP",
+    "USD"
+  ],
   "XRPUSDT": [
     "XRP",
     "USDT"
+  ],
+  "XRPXBT": [
+    "XRP",
+    "XBT"
   ],
   "XRTEUR": [
     "XRT",
@@ -2971,6 +3175,18 @@
     "YGG",
     "USD"
   ],
+  "ZECEUR": [
+    "ZEC",
+    "EUR"
+  ],
+  "ZECUSD": [
+    "ZEC",
+    "USD"
+  ],
+  "ZECXBT": [
+    "ZEC",
+    "XBT"
+  ],
   "ZETAEUR": [
     "ZETA",
     "EUR"
@@ -3036,182 +3252,6 @@
     "CAD"
   ],
   "ZUSDZJPY": [
-    "USD",
-    "JPY"
-  ],
-  "USDTUSD": [
-    "USDT",
-    "USD"
-  ],
-  "ETCETH": [
-    "ETC",
-    "ETH"
-  ],
-  "ETCXBT": [
-    "ETC",
-    "XBT"
-  ],
-  "ETCEUR": [
-    "ETC",
-    "EUR"
-  ],
-  "ETCUSD": [
-    "ETC",
-    "USD"
-  ],
-  "ETHXBT": [
-    "ETH",
-    "XBT"
-  ],
-  "ETHCAD": [
-    "ETH",
-    "CAD"
-  ],
-  "ETHEUR": [
-    "ETH",
-    "EUR"
-  ],
-  "ETHGBP": [
-    "ETH",
-    "GBP"
-  ],
-  "ETHJPY": [
-    "ETH",
-    "JPY"
-  ],
-  "ETHUSD": [
-    "ETH",
-    "USD"
-  ],
-  "LTCXBT": [
-    "LTC",
-    "XBT"
-  ],
-  "LTCEUR": [
-    "LTC",
-    "EUR"
-  ],
-  "LTCJPY": [
-    "LTC",
-    "JPY"
-  ],
-  "LTCUSD": [
-    "LTC",
-    "USD"
-  ],
-  "MLNXBT": [
-    "MLN",
-    "XBT"
-  ],
-  "MLNEUR": [
-    "MLN",
-    "EUR"
-  ],
-  "MLNUSD": [
-    "MLN",
-    "USD"
-  ],
-  "REPEUR": [
-    "REP",
-    "EUR"
-  ],
-  "REPUSD": [
-    "REP",
-    "USD"
-  ],
-  "XBTCAD": [
-    "XBT",
-    "CAD"
-  ],
-  "XBTEUR": [
-    "XBT",
-    "EUR"
-  ],
-  "XBTGBP": [
-    "XBT",
-    "GBP"
-  ],
-  "XBTJPY": [
-    "XBT",
-    "JPY"
-  ],
-  "XBTUSD": [
-    "XBT",
-    "USD"
-  ],
-  "XDGXBT": [
-    "XDG",
-    "XBT"
-  ],
-  "XLMXBT": [
-    "XLM",
-    "XBT"
-  ],
-  "XLMEUR": [
-    "XLM",
-    "EUR"
-  ],
-  "XLMGBP": [
-    "XLM",
-    "GBP"
-  ],
-  "XLMUSD": [
-    "XLM",
-    "USD"
-  ],
-  "XMRXBT": [
-    "XMR",
-    "XBT"
-  ],
-  "XMREUR": [
-    "XMR",
-    "EUR"
-  ],
-  "XMRUSD": [
-    "XMR",
-    "USD"
-  ],
-  "XRPXBT": [
-    "XRP",
-    "XBT"
-  ],
-  "XRPCAD": [
-    "XRP",
-    "CAD"
-  ],
-  "XRPEUR": [
-    "XRP",
-    "EUR"
-  ],
-  "XRPUSD": [
-    "XRP",
-    "USD"
-  ],
-  "ZECXBT": [
-    "ZEC",
-    "XBT"
-  ],
-  "ZECEUR": [
-    "ZEC",
-    "EUR"
-  ],
-  "ZECUSD": [
-    "ZEC",
-    "USD"
-  ],
-  "EURUSD": [
-    "EUR",
-    "USD"
-  ],
-  "GBPUSD": [
-    "GBP",
-    "USD"
-  ],
-  "USDCAD": [
-    "USD",
-    "CAD"
-  ],
-  "USDJPY": [
     "USD",
     "JPY"
   ]

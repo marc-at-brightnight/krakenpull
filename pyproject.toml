@@ -29,3 +29,4 @@ upload_to_pypi = false
 commit_parser = "emoji"
 allow_zero_version = false
 commit_message = "chore(release): v{version} [skip ci]"
+version_toml = ["pyproject.toml:tool.poetry.version"]

@@ -37,5 +37,7 @@ jobs:
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: |
+          git pull
+          git reset --hard HEAD
           poetry config pypi-token.pypi "$PYPI_TOKEN"
           poetry publish --build

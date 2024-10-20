@@ -11,7 +11,7 @@ repos:
     - id: ruff
       args: [--ignore,E501,--fix]
   - repo: https://github.com/BrightNight-Energy/conventional-commit-check
-    rev: v1.1.0
+    rev: v1.1.2
     hooks:
       - id: first-commit-check
         stages: [commit-msg]

@@ -29,11 +29,3 @@ upload_to_pypi = false
 commit_parser = "emoji"
 allow_zero_version = false
 commit_message = "chore(release): v{version} [skip ci]"
-
-[tool.semantic_release.branches.main]
-match = "(main)"
-prerelease = false
-
-[tool.semantic_release.branches.update-currencies]
-match = "update-currencies"
-prerelease = false

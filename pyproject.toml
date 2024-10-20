@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "krakenpull"
-version = "2.0.0"
+version = "2.0.1"
 description = "A user friendly Kraken API client using pydantic 🐙"
 authors = ["marc <marc@mawaie.com>"]
 readme = "README.md"
@@ -25,8 +25,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.semantic_release]
 version_variables = ["krakenpull/__init__.py:__version__"]
+version_toml = ["pyproject.toml:tool.poetry.version"]
 upload_to_pypi = false
 commit_parser = "emoji"
 allow_zero_version = false
 commit_message = "chore(release): v{version} [skip ci]"
-version_toml = ["pyproject.toml:tool.poetry.version"]

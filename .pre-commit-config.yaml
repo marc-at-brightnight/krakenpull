@@ -1,12 +1,18 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
-- repo: https://github.com/psf/black
-  rev: 24.4.0
-  hooks:
-  - id: black
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.4.1
-  hooks:
-  - id: ruff
-    args: [--ignore,E501,--fix]
+  - repo: https://github.com/psf/black
+    rev: 24.4.0
+    hooks:
+    - id: black
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.1
+    hooks:
+    - id: ruff
+      args: [--ignore,E501,--fix]
+  - repo: https://github.com/BrightNight-Energy/conventional-commit-check
+    rev: v1.1.0
+    hooks:
+      - id: first-commit-check
+        stages: [commit-msg]
+        args: [--parser=emoji]

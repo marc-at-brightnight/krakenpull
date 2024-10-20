@@ -1,3 +1,5 @@
+import json
+from pathlib import Path
 from unittest.mock import MagicMock
 
 import pytest
@@ -5,12 +7,19 @@ from pydantic import TypeAdapter
 
 from krakenpull import Currency, ClosedTransaction
 from krakenpull.client import Kraken
+from krakenpull.models import JSON
 from krakenpull.utils import load_json
 from tests import TEST_DATA_DIR
 
 
 def pytest_addoption(parser):
     parser.addoption("--real", action="store", default=False)
+    parser.addoption(
+        "--beta",
+        action="store_true",
+        default=False,
+        help="Update expected values",
+    )
 
 
 def pytest_generate_tests(metafunc):
@@ -64,3 +73,22 @@ def get_client():
         return client
 
     return _get_client
+
+
+class Beta:
+    def __init__(self, update: bool):
+        self._update = update
+
+    def __call__(self, path: Path, actual: JSON) -> JSON:
+        with open(path) as f:
+            expected = json.load(f)
+        if self._update:
+            with open(path, "w") as f:
+                json.dump(actual, f, indent=2, sort_keys=True)
+        return expected
+
+
+@pytest.fixture()
+def beta(request):
+    update = request.config.getoption("--beta")
+    yield Beta(update)

@@ -1111,6 +1111,14 @@
     "GHST",
     "XBT"
   ],
+  "GIGAEUR": [
+    "GIGA",
+    "EUR"
+  ],
+  "GIGAUSD": [
+    "GIGA",
+    "USD"
+  ],
   "GLMREUR": [
     "GLMR",
     "EUR"

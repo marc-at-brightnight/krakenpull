@@ -120,6 +120,7 @@ class CryptoCurrency(AutoName):
     GARI = auto()
     GFI = auto()
     GHST = auto()
+    GIGA = auto()
     GLMR = auto()
     GMT = auto()
     GMX = auto()

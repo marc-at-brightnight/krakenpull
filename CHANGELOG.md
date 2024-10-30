@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v2.0.2 (2024-10-30)
+
+### :bug:
+
+* :bug: Add GIGA to accepted currencies (#13) ([`9b59852`](https://github.com/marc-at-brightnight/krakenpull/commit/9b598522133e1ed1785c28b5d94cb24ae02ae236))
+
+### Other
+
+* ✏️ Fix pyproject.toml (#12)
+
+Update pyproject.toml version variable ([`6d33cb7`](https://github.com/marc-at-brightnight/krakenpull/commit/6d33cb7c519bd4db54b6ce628b5aeb4ddd55b76b))
+
+* 🐛 Fix bug with deployment (#11)
+
+- Pull from branch before deployment to get version changes
+- Update pyproject toml version ([`b26ed57`](https://github.com/marc-at-brightnight/krakenpull/commit/b26ed5702f44821c8a99ac19749fc2a58d61a7ae))
+
+
 ## v2.0.1 (2024-10-20)
 
 ### :bug:
@@ -8,6 +26,8 @@
 * :bug: Update supported currencies to latest (#9) ([`21b7997`](https://github.com/marc-at-brightnight/krakenpull/commit/21b79971f1eda1c74e360a75b3b37392ef1f1af9))
 
 ### Other
+
+* chore(release): v2.0.1 [skip ci] ([`a3d3c28`](https://github.com/marc-at-brightnight/krakenpull/commit/a3d3c284666e95cd307d810cebd5b97dcf5e3d6b))
 
 * 🚀 Fix deployment (#10)
 

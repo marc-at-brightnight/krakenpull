@@ -1743,14 +1743,6 @@
     "MOVR",
     "USD"
   ],
-  "MPLEUR": [
-    "MPL",
-    "EUR"
-  ],
-  "MPLUSD": [
-    "MPL",
-    "USD"
-  ],
   "MSOLEUR": [
     "MSOL",
     "EUR"
@@ -2734,6 +2726,14 @@
   "USDCUSDT": [
     "USDC",
     "USDT"
+  ],
+  "USDGUSD": [
+    "USDG",
+    "USD"
+  ],
+  "USDGUSDC": [
+    "USDG",
+    "USDC"
   ],
   "USDJPY": [
     "USD",

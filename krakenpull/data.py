@@ -180,7 +180,6 @@ class CryptoCurrency(AutoName):
     MOG = auto()
     MOON = auto()
     MOVR = auto()
-    MPL = auto()
     MSOL = auto()
     MULTI = auto()
     MV = auto()

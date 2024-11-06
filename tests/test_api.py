@@ -1,5 +1,6 @@
 from deepdiff import DeepDiff
 
+from krakenpull.data import CryptoCurrency, FiatCurrency
 from krakenpull.models import ClosedTransaction, Currency, TickerInfo
 from tests import TEST_DATA_DIR
 
@@ -12,6 +13,20 @@ def test_kraken_api(get_client, real, beta):
     pair_map_jsoned = {k: [x.value for x in v] for k, v in client.pair_map.items()}
     results_expected = beta(TEST_DATA_DIR / "expected_pair_map.json", pair_map_jsoned)
     assert not DeepDiff(results_expected, pair_map_jsoned)
+
+    # make sure no currencies have been removed
+    unique_currencies = set(x for pair in client.pair_map.values() for x in pair)
+    all_currencies = list(CryptoCurrency.__dict__["_member_map_"].values()) + list(
+        FiatCurrency.__dict__["_member_map_"].values()
+    )
+    try:
+        assert len(unique_currencies) == len(all_currencies)
+    except AssertionError as e:
+        print(
+            "Remove these currencies:",
+            ", ".join(c.value for c in all_currencies if c not in unique_currencies),
+        )
+        raise e
 
 
 def test_kraken_get_account_balance(get_client, real):

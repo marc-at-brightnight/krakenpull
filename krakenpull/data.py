@@ -284,6 +284,7 @@ class CryptoCurrency(AutoName):
     UNFI = auto()
     UNI = auto()
     USDC = auto()
+    USDG = auto()
     USDS = auto()
     USDT = auto()
     UST = auto()

@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v2.0.3 (2024-11-06)
+
+### :bug:
+
+* :bug: Add USDG to accepted currencies (#14)
+
+- Remove MPL ([`ece0d83`](https://github.com/marc-at-brightnight/krakenpull/commit/ece0d83bdcdaf5b27584ee43a92b04e7e109060a))
+
+
 ## v2.0.2 (2024-10-30)
 
 ### :bug:
@@ -8,6 +17,8 @@
 * :bug: Add GIGA to accepted currencies (#13) ([`9b59852`](https://github.com/marc-at-brightnight/krakenpull/commit/9b598522133e1ed1785c28b5d94cb24ae02ae236))
 
 ### Other
+
+* chore(release): v2.0.2 [skip ci] ([`9663c7b`](https://github.com/marc-at-brightnight/krakenpull/commit/9663c7b53040e76f32fa55297ff5de5ff899c669))
 
 * ✏️ Fix pyproject.toml (#12)
 

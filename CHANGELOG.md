@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v2.0.4 (2024-11-08)
+
+### :bug:
+
+* :bug: Add SWELL to accepted currencies (#15) ([`1c7769a`](https://github.com/marc-at-brightnight/krakenpull/commit/1c7769a5bc4ab0c5d051777b580271b99f9a6aee))
+
+
 ## v2.0.3 (2024-11-06)
 
 ### :bug:
@@ -8,6 +15,10 @@
 * :bug: Add USDG to accepted currencies (#14)
 
 - Remove MPL ([`ece0d83`](https://github.com/marc-at-brightnight/krakenpull/commit/ece0d83bdcdaf5b27584ee43a92b04e7e109060a))
+
+### Other
+
+* chore(release): v2.0.3 [skip ci] ([`f5d16b8`](https://github.com/marc-at-brightnight/krakenpull/commit/f5d16b82e851937bf5110aa738caae4e564adde0))
 
 
 ## v2.0.2 (2024-10-30)

@@ -262,6 +262,7 @@ class CryptoCurrency(AutoName):
     SUI = auto()
     SUPER = auto()
     SUSHI = auto()
+    SWELL = auto()
     SYN = auto()
     T = auto()
     TAO = auto()

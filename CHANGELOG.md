@@ -1,11 +1,22 @@
 # CHANGELOG
 
 
+## v2.0.5 (2024-11-17)
+
+### :bug:
+
+* :bug: Update with latest accepted cryptocurrencies (#16) ([`5a086d1`](https://github.com/marc-at-brightnight/krakenpull/commit/5a086d17b9db2d7be5eed1cbcfdaf026325feebd))
+
+
 ## v2.0.4 (2024-11-08)
 
 ### :bug:
 
 * :bug: Add SWELL to accepted currencies (#15) ([`1c7769a`](https://github.com/marc-at-brightnight/krakenpull/commit/1c7769a5bc4ab0c5d051777b580271b99f9a6aee))
+
+### Other
+
+* chore(release): v2.0.4 [skip ci] ([`b355f92`](https://github.com/marc-at-brightnight/krakenpull/commit/b355f9253c97c4d506629def1fabe8a1c3ac1e46))
 
 
 ## v2.0.3 (2024-11-06)

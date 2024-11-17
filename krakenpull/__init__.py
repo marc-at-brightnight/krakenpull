@@ -1,6 +1,6 @@
 import typing
 
-__version__ = "2.0.4"
+__version__ = "2.0.5"
 
 VERSION = __version__
 

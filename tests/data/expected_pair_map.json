@@ -207,6 +207,14 @@
     "APT",
     "USD"
   ],
+  "APUEUR": [
+    "APU",
+    "EUR"
+  ],
+  "APUUSD": [
+    "APU",
+    "USD"
+  ],
   "ARBEUR": [
     "ARB",
     "EUR"
@@ -237,6 +245,14 @@
   ],
   "ASTRUSD": [
     "ASTR",
+    "USD"
+  ],
+  "ATHEUR": [
+    "ATH",
+    "EUR"
+  ],
+  "ATHUSD": [
+    "ATH",
     "USD"
   ],
   "ATLASEUR": [
@@ -331,10 +347,6 @@
     "BAL",
     "USD"
   ],
-  "BALXBT": [
-    "BAL",
-    "XBT"
-  ],
   "BANDEUR": [
     "BAND",
     "EUR"
@@ -343,10 +355,6 @@
     "BAND",
     "USD"
   ],
-  "BATETH": [
-    "BAT",
-    "ETH"
-  ],
   "BATEUR": [
     "BAT",
     "EUR"
@@ -354,10 +362,6 @@
   "BATUSD": [
     "BAT",
     "USD"
-  ],
-  "BATXBT": [
-    "BAT",
-    "XBT"
   ],
   "BCHAUD": [
     "BCH",
@@ -603,10 +607,6 @@
     "CRV",
     "USD"
   ],
-  "CRVXBT": [
-    "CRV",
-    "XBT"
-  ],
   "CSMEUR": [
     "CSM",
     "EUR"
@@ -666,10 +666,6 @@
   "DASHUSD": [
     "DASH",
     "USD"
-  ],
-  "DASHXBT": [
-    "DASH",
-    "XBT"
   ],
   "DBREUR": [
     "DBR",
@@ -767,21 +763,9 @@
     "ENJ",
     "EUR"
   ],
-  "ENJGBP": [
-    "ENJ",
-    "GBP"
-  ],
-  "ENJJPY": [
-    "ENJ",
-    "JPY"
-  ],
   "ENJUSD": [
     "ENJ",
     "USD"
-  ],
-  "ENJXBT": [
-    "ENJ",
-    "XBT"
   ],
   "ENSEUR": [
     "ENS",
@@ -790,10 +774,6 @@
   "ENSUSD": [
     "ENS",
     "USD"
-  ],
-  "EOSETH": [
-    "EOS",
-    "ETH"
   ],
   "EOSEUR": [
     "EOS",
@@ -806,10 +786,6 @@
   "EOSUSDT": [
     "EOS",
     "USDT"
-  ],
-  "EOSXBT": [
-    "EOS",
-    "XBT"
   ],
   "ETCETH": [
     "ETC",
@@ -943,17 +919,9 @@
     "EWT",
     "EUR"
   ],
-  "EWTGBP": [
-    "EWT",
-    "GBP"
-  ],
   "EWTUSD": [
     "EWT",
     "USD"
-  ],
-  "EWTXBT": [
-    "EWT",
-    "XBT"
   ],
   "FARMEUR": [
     "FARM",
@@ -1015,10 +983,6 @@
     "FLOKI",
     "USD"
   ],
-  "FLOWETH": [
-    "FLOW",
-    "ETH"
-  ],
   "FLOWEUR": [
     "FLOW",
     "EUR"
@@ -1026,10 +990,6 @@
   "FLOWUSD": [
     "FLOW",
     "USD"
-  ],
-  "FLOWXBT": [
-    "FLOW",
-    "XBT"
   ],
   "FLREUR": [
     "FLR",
@@ -1106,10 +1066,6 @@
   "GHSTUSD": [
     "GHST",
     "USD"
-  ],
-  "GHSTXBT": [
-    "GHST",
-    "XBT"
   ],
   "GIGAEUR": [
     "GIGA",
@@ -1223,10 +1179,6 @@
     "ICP",
     "USD"
   ],
-  "ICXETH": [
-    "ICX",
-    "ETH"
-  ],
   "ICXEUR": [
     "ICX",
     "EUR"
@@ -1234,10 +1186,6 @@
   "ICXUSD": [
     "ICX",
     "USD"
-  ],
-  "ICXXBT": [
-    "ICX",
-    "XBT"
   ],
   "IDEXEUR": [
     "IDEX",
@@ -1311,10 +1259,6 @@
     "KAR",
     "USD"
   ],
-  "KAVAETH": [
-    "KAVA",
-    "ETH"
-  ],
   "KAVAEUR": [
     "KAVA",
     "EUR"
@@ -1323,10 +1267,6 @@
     "KAVA",
     "USD"
   ],
-  "KAVAXBT": [
-    "KAVA",
-    "XBT"
-  ],
   "KEEPEUR": [
     "KEEP",
     "EUR"
@@ -1334,10 +1274,6 @@
   "KEEPUSD": [
     "KEEP",
     "USD"
-  ],
-  "KEEPXBT": [
-    "KEEP",
-    "XBT"
   ],
   "KEYEUR": [
     "KEY",
@@ -1379,10 +1315,6 @@
     "KMNO",
     "USD"
   ],
-  "KNCETH": [
-    "KNC",
-    "ETH"
-  ],
   "KNCEUR": [
     "KNC",
     "EUR"
@@ -1399,14 +1331,6 @@
     "KP3R",
     "USD"
   ],
-  "KSMDOT": [
-    "KSM",
-    "DOT"
-  ],
-  "KSMETH": [
-    "KSM",
-    "ETH"
-  ],
   "KSMEUR": [
     "KSM",
     "EUR"
@@ -1418,10 +1342,6 @@
   "KSMUSD": [
     "KSM",
     "USD"
-  ],
-  "KSMXBT": [
-    "KSM",
-    "XBT"
   ],
   "KUJIEUR": [
     "KUJI",
@@ -1507,17 +1427,9 @@
     "LPT",
     "EUR"
   ],
-  "LPTGBP": [
-    "LPT",
-    "GBP"
-  ],
   "LPTUSD": [
     "LPT",
     "USD"
-  ],
-  "LPTXBT": [
-    "LPT",
-    "XBT"
   ],
   "LRCEUR": [
     "LRC",
@@ -1775,10 +1687,6 @@
     "MXC",
     "USD"
   ],
-  "NANOETH": [
-    "NANO",
-    "ETH"
-  ],
   "NANOEUR": [
     "NANO",
     "EUR"
@@ -1786,10 +1694,6 @@
   "NANOUSD": [
     "NANO",
     "USD"
-  ],
-  "NANOXBT": [
-    "NANO",
-    "XBT"
   ],
   "NEAREUR": [
     "NEAR",
@@ -1839,25 +1743,13 @@
     "NYM",
     "USD"
   ],
-  "NYMXBT": [
-    "NYM",
-    "XBT"
-  ],
   "OCEANEUR": [
     "OCEAN",
     "EUR"
   ],
-  "OCEANGBP": [
-    "OCEAN",
-    "GBP"
-  ],
   "OCEANUSD": [
     "OCEAN",
     "USD"
-  ],
-  "OCEANXBT": [
-    "OCEAN",
-    "XBT"
   ],
   "OGNEUR": [
     "OGN",
@@ -1867,25 +1759,13 @@
     "OGN",
     "USD"
   ],
-  "OMGETH": [
-    "OMG",
-    "ETH"
-  ],
   "OMGEUR": [
     "OMG",
     "EUR"
   ],
-  "OMGJPY": [
-    "OMG",
-    "JPY"
-  ],
   "OMGUSD": [
     "OMG",
     "USD"
-  ],
-  "OMGXBT": [
-    "OMG",
-    "XBT"
   ],
   "ONDOEUR": [
     "ONDO",
@@ -2111,10 +1991,6 @@
     "QNT",
     "USD"
   ],
-  "QTUMETH": [
-    "QTUM",
-    "ETH"
-  ],
   "QTUMEUR": [
     "QTUM",
     "EUR"
@@ -2122,10 +1998,6 @@
   "QTUMUSD": [
     "QTUM",
     "USD"
-  ],
-  "QTUMXBT": [
-    "QTUM",
-    "XBT"
   ],
   "RADEUR": [
     "RAD",
@@ -2150,10 +2022,6 @@
   "RARIUSD": [
     "RARI",
     "USD"
-  ],
-  "RARIXBT": [
-    "RARI",
-    "XBT"
   ],
   "RAYEUR": [
     "RAY",
@@ -2195,10 +2063,6 @@
     "REP",
     "USD"
   ],
-  "REPV2ETH": [
-    "REPV2",
-    "ETH"
-  ],
   "REPV2EUR": [
     "REPV2",
     "EUR"
@@ -2206,10 +2070,6 @@
   "REPV2USD": [
     "REPV2",
     "USD"
-  ],
-  "REPV2XBT": [
-    "REPV2",
-    "XBT"
   ],
   "REQEUR": [
     "REQ",
@@ -2371,10 +2231,6 @@
     "SKY",
     "USD"
   ],
-  "SNXETH": [
-    "SNX",
-    "ETH"
-  ],
   "SNXEUR": [
     "SNX",
     "EUR"
@@ -2431,10 +2287,6 @@
     "SRM",
     "USD"
   ],
-  "SRMXBT": [
-    "SRM",
-    "XBT"
-  ],
   "STEPEUR": [
     "STEP",
     "EUR"
@@ -2458,10 +2310,6 @@
   "STORJUSD": [
     "STORJ",
     "USD"
-  ],
-  "STORJXBT": [
-    "STORJ",
-    "XBT"
   ],
   "STRDEUR": [
     "STRD",
@@ -2525,6 +2373,14 @@
   ],
   "SYNUSD": [
     "SYN",
+    "USD"
+  ],
+  "SYRUPEUR": [
+    "SYRUP",
+    "EUR"
+  ],
+  "SYRUPUSD": [
+    "SYRUP",
     "USD"
   ],
   "TAOEUR": [
@@ -3090,10 +2946,6 @@
   "XTZUSDT": [
     "XTZ",
     "USDT"
-  ],
-  "XTZXBT": [
-    "XTZ",
-    "XBT"
   ],
   "XXBTZCAD": [
     "XBT",

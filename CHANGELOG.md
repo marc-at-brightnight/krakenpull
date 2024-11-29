@@ -1,11 +1,24 @@
 # CHANGELOG
 
 
+## v3.0.0 (2024-11-29)
+
+### :boom:
+
+* :boom: Remove enums in currency definitions (#17)
+
+- Removing enums solves problems of constantly adding currencies as Kraken adds them to the exchange ([`e8edf13`](https://github.com/marc-at-brightnight/krakenpull/commit/e8edf13efeead833212f98066e2b5948ff1882d1))
+
+
 ## v2.0.5 (2024-11-17)
 
 ### :bug:
 
 * :bug: Update with latest accepted cryptocurrencies (#16) ([`5a086d1`](https://github.com/marc-at-brightnight/krakenpull/commit/5a086d17b9db2d7be5eed1cbcfdaf026325feebd))
+
+### Other
+
+* chore(release): v2.0.5 [skip ci] ([`0f35fb3`](https://github.com/marc-at-brightnight/krakenpull/commit/0f35fb3acf61d102fb36f379859a1a034c68b13c))
 
 
 ## v2.0.4 (2024-11-08)

@@ -9,9 +9,6 @@ if typing.TYPE_CHECKING:
     # import of virtually everything is supported via `__getattr__` below,
     # but we need them here for type checking and IDE support
     from .models import (
-        FiatCurrency,
-        CryptoCurrency,
-        Currency,
         CurrencyPair,
         TransactionType,
         OrderType,
@@ -26,9 +23,6 @@ if typing.TYPE_CHECKING:
 __version__ = VERSION
 __all__ = (
     # models
-    "FiatCurrency",
-    "CryptoCurrency",
-    "Currency",
     "CurrencyPair",
     "TransactionType",
     "OrderType",
@@ -42,9 +36,6 @@ __all__ = (
 # A mapping of {<member name>: (package, <module name>)} defining dynamic imports
 _dynamic_imports: "dict[str, tuple[str, str]]" = {
     # models
-    "FiatCurrency": (__package__, ".models"),
-    "CryptoCurrency": (__package__, ".models"),
-    "Currency": (__package__, ".models"),
     "CurrencyPair": (__package__, ".models"),
     "TransactionType": (__package__, ".models"),
     "OrderType": (__package__, ".models"),

@@ -5,8 +5,6 @@ from typing import Any, TypedDict, Type
 
 from pydantic import BaseModel
 
-from krakenpull.data import FiatCurrency, CryptoCurrency
-
 JSON = dict[str, Any]
 
 
@@ -17,17 +15,7 @@ def extend_enum(base_enum: Type[Enum], other_enum: Type[Enum]):
     )
 
 
-CurrencyType = FiatCurrency | CryptoCurrency
-
-
-Currency = extend_enum(CryptoCurrency, FiatCurrency)
-
-
-CurrencyPair = (
-    tuple[CryptoCurrency, CryptoCurrency]
-    | tuple[CryptoCurrency, FiatCurrency]
-    | tuple[FiatCurrency, FiatCurrency]
-)
+CurrencyPair = tuple[str, str]
 
 
 class TransactionType(Enum):
@@ -54,16 +42,16 @@ class BaseTickerInfo(BaseModel):
     price: float
 
     @property
-    def currency1(self) -> CurrencyType:
+    def currency1(self) -> str:
         return self.pair[0]
 
     @property
-    def currency2(self) -> CurrencyType:
+    def currency2(self) -> str:
         return self.pair[1]
 
     @property
     def currency_pair_id(self) -> str:
-        return "".join(c.value for c in list(self.pair))
+        return "".join(self.pair)
 
 
 class ClosedTransaction(BaseTickerInfo):
@@ -85,7 +73,7 @@ class TickerInfo(BaseTickerInfo):
 
 
 class Asset(BaseModel):
-    currency: CurrencyType
+    currency: str
     value: float
     amount: float
 

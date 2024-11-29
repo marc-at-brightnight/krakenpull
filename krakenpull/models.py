@@ -51,7 +51,7 @@ class BaseTickerInfo(BaseModel):
 
     @property
     def currency_pair_id(self) -> str:
-        return "".join(c.value for c in list(self.pair))
+        return "".join(self.pair)
 
 
 class ClosedTransaction(BaseTickerInfo):

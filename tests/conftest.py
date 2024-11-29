@@ -44,11 +44,11 @@ def get_client():
         client.get_closed_orders = MagicMock(return_value=TypeAdapter(list[ClosedTransaction]).validate_python(transactions))  # type: ignore
         client.get_account_balance = MagicMock(  # type: ignore
             return_value={
-                'FLR': 1062.2314,
-                'SGB': 1062.2666259600,
-                'USDT': 10474.11937100,
-                'XBT': 4.2375553847,
-                'XMR': 1.600,
+                "FLR": 1062.2314,
+                "SGB": 1062.2666259600,
+                "USDT": 10474.11937100,
+                "XBT": 4.2375553847,
+                "XMR": 1.600,
             }
         )
         client.get_order_book = MagicMock(  # type: ignore

@@ -48,5 +48,6 @@ make use of them, you can install them by using the following commands:
 
 ```shell
 brew install pre-commit
-pre-commit install
+pre-commit install --install-hooks
+pre-commit install --hook-type commit-msg
 ```

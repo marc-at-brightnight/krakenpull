@@ -92,9 +92,7 @@ class Kraken:
                 res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
                 result = self._get_result(res, op="get ticker info")
             except Exception:
-                stringed_pairs = [
-                    "".join(reversed(pair)) for pair in pairs
-                ]
+                stringed_pairs = ["".join(reversed(pair)) for pair in pairs]
                 res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
                 result = self._get_result(res, op="get ticker info")
         else:

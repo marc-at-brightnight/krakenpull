@@ -12,7 +12,6 @@ from krakenpull.models import (
     TickerInfo,
     JSON,
     TradingPairs,
-    CurrencyType,
 )
 from krakenpull.utils import get_unique_tickers, get_currency_pair, parse_currency
 
@@ -31,11 +30,11 @@ class Kraken:
 
     def get_order_book(self, currency_pair: CurrencyPair) -> JSON:
         url, _ = self._return_url_endpoint(endpoint="Depth")
-        res = requests.post(f"{url}?pair={''.join(c.value for c in currency_pair)}")
+        res = requests.post(f"{url}?pair={''.join(currency_pair)}")
         result = self._get_result(res, op="get order book")
         return list(result.values())[0]
 
-    def get_account_balance(self) -> dict[CurrencyType, float]:
+    def get_account_balance(self) -> dict[str, float]:
         url, endpoint = self._return_url_endpoint(endpoint="Balance", private=True)
         nonce = self._get_server_time_unix()
         headers = self._headers(endpoint, nonce)
@@ -88,13 +87,13 @@ class Kraken:
                 currency_pairs if isinstance(currency_pairs, list) else [currency_pairs]
             )
 
-            stringed_pairs = ["".join(c.value for c in pair) for pair in pairs]
+            stringed_pairs = ["".join(pair) for pair in pairs]
             try:
                 res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
                 result = self._get_result(res, op="get ticker info")
             except Exception:
                 stringed_pairs = [
-                    "".join(c.value for c in reversed(pair)) for pair in pairs
+                    "".join(reversed(pair)) for pair in pairs
                 ]
                 res = requests.post(f"{url}?pair={','.join(stringed_pairs)}")
                 result = self._get_result(res, op="get ticker info")

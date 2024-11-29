@@ -899,6 +899,14 @@
     "EUR",
     "JPY"
   ],
+  "EURQEUR": [
+    "EURQ",
+    "EUR"
+  ],
+  "EURQUSD": [
+    "EURQ",
+    "USD"
+  ],
   "EURTEUR": [
     "EURT",
     "EUR"
@@ -1257,6 +1265,14 @@
   ],
   "KARUSD": [
     "KAR",
+    "USD"
+  ],
+  "KASEUR": [
+    "KAS",
+    "EUR"
+  ],
+  "KASUSD": [
+    "KAS",
     "USD"
   ],
   "KAVAEUR": [
@@ -1647,6 +1663,14 @@
     "MOON",
     "USD"
   ],
+  "MORPHOEUR": [
+    "MORPHO",
+    "EUR"
+  ],
+  "MORPHOUSD": [
+    "MORPHO",
+    "USD"
+  ],
   "MOVREUR": [
     "MOVR",
     "EUR"
@@ -1847,9 +1871,21 @@
     "PENDLE",
     "USD"
   ],
+  "PEPEAUD": [
+    "PEPE",
+    "AUD"
+  ],
+  "PEPECAD": [
+    "PEPE",
+    "CAD"
+  ],
   "PEPEEUR": [
     "PEPE",
     "EUR"
+  ],
+  "PEPEGBP": [
+    "PEPE",
+    "GBP"
   ],
   "PEPEUSD": [
     "PEPE",
@@ -1914,6 +1950,10 @@
   "POPCATEUR": [
     "POPCAT",
     "EUR"
+  ],
+  "POPCATGBP": [
+    "POPCAT",
+    "GBP"
   ],
   "POPCATUSD": [
     "POPCAT",
@@ -2111,6 +2151,14 @@
     "RPL",
     "USD"
   ],
+  "RSREUR": [
+    "RSR",
+    "EUR"
+  ],
+  "RSRUSD": [
+    "RSR",
+    "USD"
+  ],
   "RUNEEUR": [
     "RUNE",
     "EUR"
@@ -2247,6 +2295,10 @@
     "SOL",
     "AUD"
   ],
+  "SOLCAD": [
+    "SOL",
+    "CAD"
+  ],
   "SOLETH": [
     "SOL",
     "ETH"
@@ -2338,6 +2390,10 @@
   "SUIEUR": [
     "SUI",
     "EUR"
+  ],
+  "SUIGBP": [
+    "SUI",
+    "GBP"
   ],
   "SUIUSD": [
     "SUI",
@@ -2603,6 +2659,18 @@
     "USD",
     "JPY"
   ],
+  "USDQUSD": [
+    "USDQ",
+    "USD"
+  ],
+  "USDQUSDC": [
+    "USDQ",
+    "USDC"
+  ],
+  "USDQUSDT": [
+    "USDQ",
+    "USDT"
+  ],
   "USDSEUR": [
     "USDS",
     "EUR"
@@ -2659,6 +2727,14 @@
     "UST",
     "USDT"
   ],
+  "VANRYEUR": [
+    "VANRY",
+    "EUR"
+  ],
+  "VANRYUSD": [
+    "VANRY",
+    "USD"
+  ],
   "WAXLEUR": [
     "WAXL",
     "EUR"
@@ -2694,6 +2770,10 @@
   "WIFEUR": [
     "WIF",
     "EUR"
+  ],
+  "WIFGBP": [
+    "WIF",
+    "GBP"
   ],
   "WIFUSD": [
     "WIF",
@@ -2766,6 +2846,10 @@
   "XDGAUD": [
     "XDG",
     "AUD"
+  ],
+  "XDGCAD": [
+    "XDG",
+    "CAD"
   ],
   "XDGEUR": [
     "XDG",
